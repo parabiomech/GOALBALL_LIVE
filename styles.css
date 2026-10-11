@@ -35,4 +35,4 @@
 
 .usage-table{max-width:100%;overflow-x:auto}.usage-table table{min-width:560px}.usage-summary td:last-child{line-height:1.8}
 
-.result-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.result-buttons [data-timeout]{font-size:14px}
+#timeoutDialog{width:min(380px,calc(100% - 28px))}#timeoutForm{display:grid;gap:18px}#timeoutForm label{display:grid;gap:8px}
