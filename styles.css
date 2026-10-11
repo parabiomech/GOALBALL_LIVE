@@ -34,3 +34,5 @@
 .score-card{background:transparent}.timeline-disclosure{margin-top:10px}.timeline-disclosure>summary{cursor:pointer;font-size:11px;color:var(--muted);padding:5px 0}.timeline-disclosure>summary:focus-visible{outline:2px solid #61887a;outline-offset:3px}.timeline-disclosure .timeline{margin-top:5px}
 
 .usage-table{max-width:100%;overflow-x:auto}.usage-table table{min-width:560px}.usage-summary td:last-child{line-height:1.8}
+
+.result-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.result-buttons [data-timeout]{font-size:14px}

@@ -19,3 +19,5 @@ v3 schemaVersion 6 / goalball-live-v6. 기존 v2 저장 키는 읽기만 하며 
 검증: `node verify.cjs`
 
 © PARABIOMECH · 문의 parabiomech@gamil.com
+
+타임아웃 T: 투구 후 이벤트에서 수기 시간과 함께 켜고 끌 수 있으며 골·파울과 독립적으로 저장합니다. 타임라인·시퀀스에는 ⏸ 기호와 T를 표시하고 이벤트 필터에서 선택할 수 있습니다. 단축키 T도 지원합니다.
