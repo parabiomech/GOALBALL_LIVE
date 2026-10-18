@@ -158,11 +158,11 @@ function drawCourt(canvas,{kind,half=match.half,team='A',start=null,release=null
   const line=(x1,y1,x2,y2)=>{c.beginPath();c.moveTo(X(x1),Y(y1));c.lineTo(X(x2),Y(y2));c.stroke();};
   c.strokeStyle=kind==='input'?'#fff8ec':'#d9f2f1';c.lineWidth=2;for(const x of [30,60,120,150])line(x,0,x,90);
   for(const end of [0,180]){const d=end===0?1:-1;line(end+d*15,0,end+d*15,15);line(end+d*15,75,end+d*15,90);line(end,45,end+d*5,45);line(end+d*30,45,end+d*25,45);line(end,15,end+d*1.5,15);line(end,75,end+d*1.5,75);}
-  c.save();c.strokeStyle=kind==='input'?'#fff8ec99':'#16363f55';c.lineWidth=.8;for(const y of [15,30,45,60,75])line(0,y,180,y);c.setLineDash([3,6]);c.strokeStyle=kind==='input'?'#795a2e44':'#102f3e33';c.lineWidth=.6;for(const y of [7.5,22.5,37.5,52.5,67.5,82.5])line(0,y,180,y);c.restore();
+  c.save();c.setLineDash([3,6]);c.strokeStyle=kind==='input'?'#795a2e77':'#102f3e66';c.lineWidth=.8;for(const y of [7.5,22.5,37.5,52.5,67.5,82.5])line(0,y,180,y);c.restore();
   c.strokeStyle=kind==='input'?'#f9f5eb':'#16363f';c.lineWidth=2;c.strokeRect(left,top,w,h);
   c.strokeStyle='#1d59ad';c.lineWidth=3.5;line(90,0,90,90);
   for(const end of [0,180]){const d=end===0?-1:1;c.strokeStyle='#315e9855';c.lineWidth=.7;for(let y=0;y<=90;y+=3)line(end,y,end+d*4,y);c.strokeStyle='#1d59ad';c.lineWidth=2;line(end+d*4,0,end+d*4,90);c.fillStyle='#1d59ad';c.fillRect(X(end)-3,top-4,6,h+8);}
-  c.font='13px Malgun Gothic, sans-serif';c.textAlign='center';c.fillStyle='#475b51';for(let i=0;i<7;i++){c.fillText(String(7-i),left-24,Y(i*15)+4);c.fillText(String(i+1),left+w+24,Y(i*15)+4);}
+  c.font='13px Malgun Gothic, sans-serif';c.textAlign='center';c.fillStyle='#475b51';for(let i=0;i<7;i++){const y=i===0?3.75:i===6?86.25:i*15;c.fillText(String(7-i),left-24,Y(y)+4);c.fillText(String(i+1),left+w+24,Y(y)+4);}
   const leftTeam=half==='first'?'A':'B',rightTeam=leftTeam==='A'?'B':'A';c.fillText(kind==='input'?`왼쪽 · ${match.teams[leftTeam].name}`:(teamName||match.teams[team].name),left+w*.25,top-24);c.fillText(kind==='input'?`오른쪽 · ${match.teams[rightTeam].name}`:'상대 코트',left+w*.75,top-24);
   c.font='12px Malgun Gothic, sans-serif';c.fillText(kind==='input'?'벤치 · 왼쪽 아래 1 / 오른쪽 위 1':'팀 기준 · 각 골대 오른쪽이 1',430,465);c.font='10px Malgun Gothic, sans-serif';c.fillText('18 m / 180',430,489);
   c.save();c.translate(20,240);c.rotate(-Math.PI/2);c.fillText('9 m / 90',0,0);c.restore();
