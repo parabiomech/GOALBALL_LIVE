@@ -41,3 +41,5 @@
 
 /* Recent history sits below the court; recording controls remain alongside it. */
 .record-view{grid-template-areas:"court controls" "recent controls";row-gap:22px;align-items:start}.court-section{grid-area:court;min-width:0}.record-controls{grid-area:controls}.record-view>.recent-section{grid-area:recent;min-width:0;margin-top:0;padding-top:14px}.record-view>.recent-section .recent-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:4px 0}.record-view>.recent-section .recent-record,.record-view>.recent-section .recent-substitution{grid-column:1;grid-row:1;min-width:0}.record-view>.recent-section .recent-actions{grid-column:2;grid-row:1;gap:12px}.record-view>.recent-section .recent-actions button{min-height:34px}.record-view>.recent-section #recentRecords{max-height:300px}@media(max-width:560px){.record-view>.recent-section{width:100%}.record-view>.recent-section .recent-row{display:flex;flex-direction:column;align-items:stretch;gap:0}.record-view>.recent-section .recent-actions{order:2}}
+
+.result-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}
